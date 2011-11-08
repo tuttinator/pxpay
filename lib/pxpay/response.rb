@@ -8,9 +8,9 @@ module Pxpay
     # Create a new Payment Express response object by passing in the return parameters provided to the success/failure URL
     
     def initialize(params)
-      @result = params[:result]
-      @user_id = params[:userid]
-      @post = build_xml( params[:result] )
+      @result = params["result"]
+      @user_id = params["userid"]
+      @post = build_xml( params["result"] )
     end
     
     # Retrieving the transaction details from Payment Express as an instance of Pxpay::Notification
